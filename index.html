@@ -1,0 +1,901 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Sherri's Diner | Delicious Moments</title>
+    <!-- Bootstrap: local files -->
+    <link rel="stylesheet" href="CSS/bootstrap.min.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet"href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <!-- External files -->
+     <link rel="stylesheet" href="CSS/style.css">
+    <script src="Js/bootstrap.bundle.min.js"></script>
+        
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar navbar-expand-lg navbar-light sticky-top">
+    <div class="container">
+        <a class="navbar-brand logo" href="#home">
+            SHERRI'S <span>DINER.</span>
+        </a>
+
+        <button class="navbar-toggler" type="button"
+                data-bs-toggle="collapse" data-bs-target="#mainNav"
+                aria-controls="mainNav" aria-expanded="false"
+                aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="mainNav">
+            <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-3">
+                <li class="nav-item">
+                    <a class="nav-link active" href="#home">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#about">About</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#menu">Our Menu</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#team">Our Team</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#contact">Contact</a>
+                </li>
+                <li class="nav-item">
+                    <button class="btn btn-orange position-relative"
+                            id="cartButton">
+                        <i class="fa-solid fa-bag-shopping me-2"></i>
+                        Cart
+                        <span class="cart-count" id="cartCount">0</span>
+                    </button>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero" id="home">
+    <div class="container">
+        <div class="row align-items-center gy-5">
+            <div class="col-lg-6 hero-content">
+                <span class="eyebrow">
+                    <i class="fa-solid fa-utensils me-2"></i>
+                    FRESH FOOD, HAPPY MOOD
+                </span>
+
+                <h1>
+                    Good Food.<br>
+                    Great <span>Moments.</span>
+                </h1>
+
+                <p>
+                    Welcome to Sherri's Diner, where every meal is prepared
+                    with care and every bite brings a little more happiness.
+                </p>
+
+                <div class="d-flex flex-wrap gap-3">
+                    <a href="#menu" class="btn btn-orange btn-lg">
+                        Explore Menu
+                        <i class="fa-solid fa-arrow-right ms-2"></i>
+                    </a>
+
+                    <a href="#about" class="btn btn-outline-dark btn-lg">
+                        Discover Us
+                    </a>
+                </div>
+
+                <div class="hero-stats">
+                    <div>
+                        <h3>12+</h3>
+                        <span>Delicious Meals</span>
+                    </div>
+                    <div>
+                        <h3>100%</h3>
+                        <span>Made With Care</span>
+                    </div>
+                    <div>
+                        <h3>Fresh</h3>
+                        <span>Every Day</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-6 text-center">
+                <div class="hero-image-wrap">
+                    <div class="hero-circle"></div>
+                    <img
+                        src="images/1000139769-removebg-preview.png"
+                        class="img-fluid hero-image"
+                        alt="Delicious meal from Sherri's Diner">
+
+                    <div class="floating-note">
+                        <i class="fa-solid fa-star"></i>
+                        <div>
+                            <strong>Made with love</strong>
+                            <small>Served with a smile</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- FEATURES -->
+<section class="features-section">
+    <div class="container">
+        <div class="row g-4">
+            <div class="col-6 col-lg-3">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fa-solid fa-user-chef"></i>
+                    </div>
+                    <h5>Expert Chefs</h5>
+                    <p>Meals crafted with skill and passion.</p>
+                </div>
+            </div>
+
+            <div class="col-6 col-lg-3">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fa-solid fa-leaf"></i>
+                    </div>
+                    <h5>Fresh Ingredients</h5>
+                    <p>Quality ingredients in every dish.</p>
+                </div>
+            </div>
+
+            <div class="col-6 col-lg-3">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fa-solid fa-motorcycle"></i>
+                    </div>
+                    <h5>Easy Ordering</h5>
+                    <p>Find your favorite meal in seconds.</p>
+                </div>
+            </div>
+
+            <div class="col-6 col-lg-3">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fa-solid fa-heart"></i>
+                    </div>
+                    <h5>Made with Love</h5>
+                    <p>Good food for every occasion.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ABOUT -->
+<section class="section-padding" id="about">
+    <div class="container">
+        <div class="row align-items-center gy-5">
+            <div class="col-lg-6">
+                <div class="about-images">
+                    <img
+                        src="images/Gemini_Generated_Image_2capbl2capbl2cap.png"
+                        class="img-fluid about-image"
+                        alt="Food and dining at Sherri's Diner">
+
+                    <div class="experience-card">
+                        <i class="fa-solid fa-utensils"></i>
+                        <strong>Good food</strong>
+                        <span>Good company</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-6 about-content">
+                <span class="section-tag">OUR STORY</span>
+                <h2 class="section-title">
+                    A Little Taste of <span>Happiness</span>
+                </h2>
+
+                <p>
+                    At Sherri's Diner, we believe that food brings people
+                    together. Our goal is to make every visit memorable with
+                    delicious meals, welcoming service and a comfortable
+                    atmosphere.
+                </p>
+
+                <p>
+                    From satisfying sandwiches to comforting homemade meals,
+                    there is something on our menu for every appetite.
+                </p>
+
+                <div class="row g-3 about-points">
+                    <div class="col-sm-6">
+                        <i class="fa-solid fa-circle-check"></i>
+                        Quality ingredients
+                    </div>
+                    <div class="col-sm-6">
+                        <i class="fa-solid fa-circle-check"></i>
+                        Friendly service
+                    </div>
+                    <div class="col-sm-6">
+                        <i class="fa-solid fa-circle-check"></i>
+                        Tasty selections
+                    </div>
+                    <div class="col-sm-6">
+                        <i class="fa-solid fa-circle-check"></i>
+                        A welcoming atmosphere
+                    </div>
+                </div>
+
+                <a href="#menu" class="btn btn-orange mt-4">
+                    Discover Our Menu
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- MENU -->
+<section class="menu-section section-padding" id="menu">
+    <div class="container">
+        <div class="section-heading text-center">
+            <span class="section-tag">MADE FRESH FOR YOU</span>
+            <h2 class="section-title">
+                Explore Our <span>Menu</span>
+            </h2>
+            <p>Find something delicious to brighten your day.</p>
+        </div>
+
+        <div class="menu-tools">
+            <div class="search-box">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <input type="search" id="searchInput"
+                       class="form-control"
+                       placeholder="Search your favorite food..."
+                       aria-label="Search menu">
+            </div>
+
+            <div class="menu-filters">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="sandwich">Sandwiches</button>
+                <button class="filter-btn" data-filter="snack">Snacks</button>
+                <button class="filter-btn" data-filter="meal">Meals</button>
+            </div>
+        </div>
+
+        <div class="row g-4" id="menuGrid">
+
+            <!-- 1 -->
+            <div class="col-sm-6 col-lg-4 col-xl-3 menu-item"
+                 data-category="sandwich" data-name="reuben sandwich">
+                <div class="food-card">
+                    <div class="food-image">
+                        <img src="images/reuben sandwich.jpeg"
+                             alt="Reuben Sandwich" loading="lazy">
+                        <span class="food-label">Popular</span>
+                    </div>
+                    <div class="food-info">
+                        <div class="food-title-row">
+                            <h5>Reuben Sandwich</h5>
+                            <span class="food-rating">
+                                <i class="fa-solid fa-star"></i> 4.9
+                            </span>
+                        </div>
+                        <p>A delicious classic sandwich.</p>
+                        <div class="food-bottom">
+                            <strong>$10.75</strong>
+                            <button class="add-cart" data-name="Reuben Sandwich"
+                                    data-price="10.75">
+                                <i class="fa-solid fa-plus"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 2 -->
+            <div class="col-sm-6 col-lg-4 col-xl-3 menu-item"
+                 data-category="meal" data-name="taco">
+                <div class="food-card">
+                    <div class="food-image">
+                        <img src="images/taco.jpeg"
+                             alt="taco" loading="lazy">
+                             <span class="food-label">Popular</span>
+                    </div>
+                    <div class="food-info">
+                        <div class="food-title-row">
+                            <h5>Taco salad</h5>
+                            <span class="food-rating"><i class="fa-solid fa-star"></i> 4.9</span>
+                        </div>
+                        <p>A flavorful bite for any time.</p>
+                        <div class="food-bottom">
+                            <strong>$4.29</strong>
+                            <button class="add-cart" data-name="taco" data-price="4.29">
+                                <i class="fa-solid fa-plus"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 3 -->
+            <div class="col-sm-6 col-lg-4 col-xl-3 menu-item"
+                 data-category="snack" data-name="catfish special">
+                <div class="food-card">
+                    <div class="food-image">
+                        <img src="images/catfish special.jpg" alt="French Toast" loading="lazy">
+                        <span class="food-label">Popular</span>
+                    </div>
+                    <div class="food-info">
+                        <div class="food-title-row">
+                            <h5>Catfish Special</h5>
+                            <span class="food-rating"><i class="fa-solid fa-star"></i> 4.9</span>
+                        </div>
+                        <p>Crispy fried catfish with fries</p>
+                        <div class="food-bottom">
+                            <strong>$10.99</strong>
+                            <button class="add-cart" data-name="French Toast" data-price="10.99">
+                                <i class="fa-solid fa-plus"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 4 -->
+            <div class="col-sm-6 col-lg-4 col-xl-3 menu-item"
+                 data-category="snack" data-name="onion rings">
+                <div class="food-card">
+                    <div class="food-image">
+                        <img src="images/onion.jpg" alt="Onion Rings" loading="lazy">
+                        <span class="food-label">Popular</span>
+                    </div>
+                    <div class="food-info">
+                        <div class="food-title-row">
+                            <h5>Onion Rings</h5>
+                            <span class="food-rating"><i class="fa-solid fa-star"></i> 4.7</span>
+                        </div>
+                        <p>Golden, crispy and delicious.</p>
+                        <div class="food-bottom">
+                            <strong>$2.99</strong>
+                            <button class="add-cart" data-name="Onion Rings" data-price="2.99">
+                                <i class="fa-solid fa-plus"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 5 -->
+            <div class="col-sm-6 col-lg-4 col-xl-3 menu-item"
+                 data-category="sandwich" data-name="chicken sandwich">
+                <div class="food-card">
+                    <div class="food-image">
+                        <img src="images/fried chicken sandwich.jpg"
+                             alt="Chicken Sandwich" loading="lazy">
+                    </div>
+                    <div class="food-info">
+                        <div class="food-title-row">
+                            <h5>Chicken Sandwich</h5>
+                            <span class="food-rating"><i class="fa-solid fa-star"></i> 4.9</span>
+                        </div>
+                        <p>Crispy, tasty and satisfying.</p>
+                        <div class="food-bottom">
+                            <strong>$8.99</strong>
+                            <button class="add-cart" data-name="Chicken Sandwich" data-price="8.99">
+                                <i class="fa-solid fa-plus"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 6 -->
+           <div class="col-sm-6 col-lg-4 col-xl-3 menu-item"
+                 data-category="meal" data-name="Chicken and Dumplings">
+                <div class="food-card">
+                    <div class="food-image">
+                        <img src="images/chicken-dumplings.jpg" alt="Chicken and Dumplings" loading="lazy">
+                    </div>
+                    <div class="food-info">
+                        <div class="food-title-row">
+                            <h5>Chicken and Dumplings</h5>
+                            <span class="food-rating"><i class="fa-solid fa-star"></i> 4.8</span>
+                        </div>
+                        <p>Homemade chicken and dumplings</p>
+                        <div class="food-bottom">
+                            <strong>$3.99</strong>
+                            <button class="add-cart" data-name="Chicken and Dumplings" data-price="3.99" aria-label="Add Chicken and Dumplings to cart"><i class="fa-solid fa-plus"></i></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 7 -->
+            <div class="col-sm-6 col-lg-4 col-xl-3 menu-item"
+                 data-category="meal" data-name="Santa Fe Grilled Chicken">
+                <div class="food-card">
+                    <div class="food-image">
+                        <img src="images/santa fe chicken.jpg" alt="Santa Fe Grilled Chicken" loading="lazy">
+                    </div>
+                    <div class="food-info">
+                        <div class="food-title-row">
+                            <h5>Santa Fe Grilled Chicken</h5>
+                            <span class="food-rating"><i class="fa-solid fa-star"></i> 4.9</span>
+                        </div>
+                        <p>Grilled marinated chicken</p>
+                        <div class="food-bottom">
+                            <strong>$7.99</strong>
+                            <button class="add-cart" data-name="Santa Fe Grilled Chicken" data-price="7.99" aria-label="Add Santa Fe Grilled Chicken to cart"><i class="fa-solid fa-plus"></i></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- 8 -->
+            <div class="col-sm-6 col-lg-4 col-xl-3 menu-item"
+                 data-category="meal" data-name="Homemade turkey and dressing">
+                <div class="food-card">
+                    <div class="food-image">
+                        <img src="images/turkey and dressing.jpg" alt="Homemade turkey and dressing" loading="lazy">
+                        <span class="food-label">Popular</span>
+                    </div>
+                    <div class="food-info">
+                        <div class="food-title-row">
+                            <h5>Turkey and Dressing</h5>
+                            <span class="food-rating"><i class="fa-solid fa-star"></i> 4.9</span>
+                        </div>
+                        <p>Homemade turkey and dressing</p>
+                        <div class="food-bottom">
+                            <strong>$9.99</strong>
+                            <button class="add-cart" data-name="Homemade turkey and dressing" data-price="9.99" aria-label="Add Homemade turkey and dressing to cart"><i class="fa-solid fa-plus"></i></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 9 -->
+            <div class="col-sm-6 col-lg-4 col-xl-3 menu-item"
+                 data-category="snacks" data-name="Cinnamon Rolls">
+                <div class="food-card">
+                    <div class="food-image">
+                        <img src="images/cinnamon rolls.jpg" alt="Cinnamon Rolls" loading="lazy">
+                        <span class="food-label">Popular</span>
+                    </div>
+                    <div class="food-info">
+                        <div class="food-title-row">
+                            <h5>Cinnamon Rolls</h5>
+                            <span class="food-rating"><i class="fa-solid fa-star"></i> 4.9</span>
+                        </div>
+                        <p>Fresh Cinnamon rolls with icing</p>
+                        <div class="food-bottom">
+                            <strong>$3.99</strong>
+                            <button class="add-cart" data-name="Cinnamon Rolls" data-price="3.99" aria-label="Add Cinnamon Rolls to cart"><i class="fa-solid fa-plus"></i></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- 10 -->
+            <div class="col-sm-6 col-lg-4 col-xl-3 menu-item"
+                 data-category="sandwich" data-name="steak sandwich">
+                <div class="food-card">
+                    <div class="food-image">
+                        <img src="images/steak sandwich.jpg"
+                             alt="Steak Sandwich" loading="lazy">
+                    </div>
+                    <div class="food-info">
+                        <div class="food-title-row">
+                            <h5>Steak Sandwich</h5>
+                            <span class="food-rating"><i class="fa-solid fa-star"></i> 4.9</span>
+                        </div>
+                        <p>A filling classic with rich flavor.</p>
+                        <div class="food-bottom">
+                            <strong>$8.99</strong>
+                            <button class="add-cart" data-name="Steak Sandwich" data-price="8.99">
+                                <i class="fa-solid fa-plus"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 11 -->
+           <div class="col-sm-6 col-lg-4 col-xl-3 menu-item"
+                 data-category="meal" data-name="cabbage rolls">
+                <div class="food-card">
+                    <div class="food-image">
+                        <img src="images/cabbage rolls.jpg" alt="Cabbage Rolls" loading="lazy">
+                    </div>
+                    <div class="food-info">
+                        <div class="food-title-row">
+                            <h5>Cabbage Rolls</h5>
+                            <span class="food-rating"><i class="fa-solid fa-star"></i> 4.8</span>
+                        </div>
+                        <p>A comforting homemade favorite.</p>
+                        <div class="food-bottom">
+                            <strong>$8.99</strong>
+                            <button class="add-cart" data-name="Cabbage Rolls" data-price="8.99" aria-label="Add Cabbage Rolls to cart"><i class="fa-solid fa-plus"></i></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 12 -->
+            <div class="col-sm-6 col-lg-4 col-xl-3 menu-item"
+                 data-category="meal" data-name="thick cut pork">
+                <div class="food-card">
+                    <div class="food-image">
+                        <img src="images/pork.jpg" alt="Thick Cut Pork" loading="lazy">
+                    </div>
+                    <div class="food-info">
+                        <div class="food-title-row">
+                            <h5>Thick Cut Pork</h5>
+                            <span class="food-rating"><i class="fa-solid fa-star"></i> 4.9</span>
+                        </div>
+                        <p>A hearty dish for a big appetite.</p>
+                        <div class="food-bottom">
+                            <strong>$12.99</strong>
+                            <button class="add-cart" data-name="Thick Cut Pork" data-price="12.99">
+                                <i class="fa-solid fa-plus"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <p id="noResults" class="text-center mt-4 d-none">
+            No matching meals found. Try another search.
+        </p>
+
+        <div class="text-center mt-5">
+            <a href="view.html" class="btn btn-outline-dark btn-lg">
+                View More Meals <i class="fa-solid fa-arrow-right ms-2"></i>
+            </a>
+        </div>
+    </div>
+</section>
+
+<!-- CART MODAL -->
+<div class="modal fade" id="cartModal" tabindex="-1"
+     aria-labelledby="cartModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="cartModalLabel">
+                    <i class="fa-solid fa-bag-shopping me-2"></i>Your Cart
+                </h5>
+                <button type="button" class="btn-close"
+                        data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div id="cartItems"></div>
+                <hr>
+                <div class="d-flex justify-content-between">
+                    <strong>Total</strong>
+                    <strong id="cartTotal">$0.00</strong>
+                </div>
+                <small class="text-muted d-block mt-2">
+                    Demo cart only. No payment is processed.
+                </small>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-outline-secondary"
+                        data-bs-dismiss="modal">Continue Shopping</button>
+                <button class="btn btn-orange" id="checkoutButton">
+                    Place Order
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- TEAM -->
+<section class="section-padding team-section" id="team">
+    <div class="container">
+        <div class="section-heading text-center">
+            <span class="section-tag">MEET OUR PEOPLE</span>
+            <h2 class="section-title">Our <span>Master Chefs</span></h2>
+            <p>Passionate people who make every meal special.</p>
+        </div>
+
+        <div class="row g-4 justify-content-center">
+            <div class="col-6 col-md-4 col-lg-3">
+                <div class="team-card">
+                    <img src="images/chef 1.jpg" alt="Chef one" loading="lazy">
+                    <h5>Head Chef</h5>
+                    <p>Kitchen Lead</p>
+                    <div class="team-social">
+                        <i class="fa-brands fa-facebook-f"></i>
+                        <i class="fa-brands fa-instagram"></i>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-6 col-md-4 col-lg-3">
+                <div class="team-card">
+                    <img src="images/chef 2.jpg" alt="Chef two" loading="lazy">
+                    <h5>Our Chef</h5>
+                    <p>Food Specialist</p>
+                    <div class="team-social">
+                        <i class="fa-brands fa-facebook-f"></i>
+                        <i class="fa-brands fa-instagram"></i>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-6 col-md-4 col-lg-3">
+                <div class="team-card">
+                    <img src="images/chef 3.jpg" alt="Chef three" loading="lazy">
+                    <h5>Our Chef</h5>
+                    <p>Kitchen Specialist</p>
+                    <div class="team-social">
+                        <i class="fa-brands fa-facebook-f"></i>
+                        <i class="fa-brands fa-instagram"></i>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-6 col-md-4 col-lg-3">
+                <div class="team-card">
+                    <img src="images/chef 4.jpg" alt="Chef four" loading="lazy">
+                    <h5>Our Chef</h5>
+                    <p>Food Creator</p>
+                    <div class="team-social">
+                        <i class="fa-brands fa-facebook-f"></i>
+                        <i class="fa-brands fa-instagram"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section class="testimonial-section section-padding">
+    <div class="container">
+        <div class="section-heading text-center">
+            <span class="section-tag">KIND WORDS</span>
+            <h2 class="section-title">What Our <span>Customers Say</span></h2>
+            <p>Good food tastes even better with happy customers.</p>
+        </div>
+
+        <div class="row g-4">
+            <div class="col-md-6 col-lg-3">
+                <div class="testimonial-card">
+                    <div class="quote-icon"><i class="fa-solid fa-quote-left"></i></div>
+                    <div class="stars">★★★★★</div>
+                    <p>The food is delicious, and the whole experience feels welcoming.</p>
+                    <div class="customer">
+                        <img src="images/chef 2.jpg" alt="" loading="lazy">
+                        <div><strong>Miller Smith</strong><small>Customer</small></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6 col-lg-3">
+                <div class="testimonial-card">
+                    <div class="quote-icon"><i class="fa-solid fa-quote-left"></i></div>
+                    <div class="stars">★★★★★</div>
+                    <p>A lovely place to enjoy a satisfying meal with friends.</p>
+                    <div class="customer">
+                        <img src="images/chef 3.jpg" alt="" loading="lazy">
+                        <div><strong>Alex Morgan</strong><small>Customer</small></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6 col-lg-3">
+                <div class="testimonial-card">
+                    <div class="quote-icon"><i class="fa-solid fa-quote-left"></i></div>
+                    <div class="stars">★★★★★</div>
+                    <p>Great choices on the menu. I always find something I like.</p>
+                    <div class="customer">
+                        <img src="images/chef 4.jpg" alt="" loading="lazy">
+                        <div><strong>Jordan Lee</strong><small>Customer</small></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6 col-lg-3">
+                <div class="testimonial-card">
+                    <div class="quote-icon"><i class="fa-solid fa-quote-left"></i></div>
+                    <div class="stars">★★★★★</div>
+                    <p>A warm atmosphere and food that makes you want to return.</p>
+                    <div class="customer">
+                        <img src="images/chef 1.jpg" alt="" loading="lazy">
+                        <div><strong>Taylor James</strong><small>Customer</small></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- CONTACT -->
+<section class="section-padding contact-section" id="contact">
+    <div class="container">
+        <div class="section-heading text-center">
+            <span class="section-tag">WE'D LOVE TO HEAR FROM YOU</span>
+            <h2 class="section-title">Get In <span>Touch</span></h2>
+            <p>Have a question or a special request? Send us a message.</p>
+        </div>
+
+        <div class="row g-4 align-items-stretch">
+            <div class="col-lg-5">
+                <div class="contact-info">
+                    <h3>Let's Talk Food!</h3>
+                    <p>We'd love to help with your questions and dining requests.</p>
+
+                    <div class="contact-detail">
+                        <i class="fa-solid fa-location-dot"></i>
+                        <div>
+                            <strong>Our Address</strong>
+                            <p>704 SW 59th St, Oklahoma City, OK 73109</p>
+                        </div>
+                    </div>
+
+                    <div class="contact-detail">
+                        <i class="fa-solid fa-phone"></i>
+                        <div>
+                            <strong>Call Us</strong>
+                            <p>+1 405-634-4796</p>
+                        </div>
+                    </div>
+
+                    <div class="contact-detail">
+                        <i class="fa-solid fa-envelope"></i>
+                        <div>
+                            <strong>Email Us</strong>
+                            <p>sherrisdiner@yahoo.com</p>
+                        </div>
+                    </div>
+
+                    <div class="map-wrap">
+                        <iframe
+                            src="https://www.google.com/maps?q=704+SW+59th+St,+Oklahoma+City,+OK+73109&output=embed"
+                            title="Map to Sherri's Diner"
+                            width="100%" height="220"
+                            style="border:0"
+                            loading="lazy"
+                            referrerpolicy="no-referrer-when-downgrade">
+                        </iframe>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-7">
+                <form class="contact-form" id="contactForm">
+                    <h3>Send a Message</h3>
+
+                    <div class="row g-3">
+                        <div class="col-md-6">
+                            <label for="contactName" class="form-label">Full Name</label>
+                            <input type="text" id="contactName"
+                                   class="form-control" required
+                                   placeholder="Enter your name">
+                        </div>
+
+                        <div class="col-md-6">
+                            <label for="contactEmail" class="form-label">Email Address</label>
+                            <input type="email" id="contactEmail"
+                                   class="form-control" required
+                                   placeholder="Enter your email">
+                        </div>
+
+                        <div class="col-12">
+                            <label for="contactSubject" class="form-label">Subject</label>
+                            <input type="text" id="contactSubject"
+                                   class="form-control" required
+                                   placeholder="What is your message about?">
+                        </div>
+
+                        <div class="col-12">
+                            <label for="contactMessage" class="form-label">Your Message</label>
+                            <textarea id="contactMessage" class="form-control"
+                                      rows="5" required
+                                      placeholder="Write your message here..."></textarea>
+                        </div>
+
+                        <div class="col-12">
+                            <button type="submit" class="btn btn-orange btn-lg w-100">
+                                Send Message
+                                <i class="fa-solid fa-paper-plane ms-2"></i>
+                            </button>
+                            <p id="contactStatus" class="mt-3 mb-0"
+                               role="status" aria-live="polite"></p>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- NEWSLETTER -->
+<section class="newsletter-section">
+    <div class="container">
+        <div class="row align-items-center gy-3">
+            <div class="col-lg-6">
+                <h2>Something Delicious Is Coming.</h2>
+                <p>Join our newsletter for diner updates and special offers.</p>
+            </div>
+            <div class="col-lg-6">
+                <form id="newsletterForm" class="newsletter-form">
+                    <input type="email" id="newsletterEmail"
+                           class="form-control" required
+                           placeholder="Your email address"
+                           aria-label="Newsletter email">
+                    <button type="submit" class="btn btn-orange">Subscribe</button>
+                </form>
+                <p id="newsletterStatus" class="mt-2 mb-0"
+                   role="status" aria-live="polite"></p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="site-footer">
+    <div class="container">
+        <div class="row g-4">
+            <div class="col-md-6 col-lg-3">
+                <a href="#home" class="navbar-brand logo footer-logo">
+                    SHERRI'S <span>DINER.</span>
+                </a>
+                <p class="footer-description">
+                    Bringing people together with delicious food and
+                    memorable dining experiences.
+                </p>
+                <div class="footer-socials">
+                    <a href="#contact" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="#contact" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#contact" aria-label="X"><i class="fa-brands fa-x-twitter"></i></a>
+                </div>
+            </div>
+
+            <div class="col-6 col-lg-3">
+                <h5>Quick Links</h5>
+                <a href="#home">Home</a>
+                <a href="#about">About Us</a>
+                <a href="#menu">Our Menu</a>
+                <a href="#team">Our Team</a>
+                <a href="#contact">Contact</a>
+            </div>
+
+            <div class="col-6 col-lg-3">
+                <h5>Opening Hours</h5>
+                <p>Monday – Saturday</p>
+                <strong>06:00 AM – 03:00 PM</strong>
+                <p class="mt-3">Sunday</p>
+                <strong>07:00 AM – 05:00 PM</strong>
+            </div>
+
+            <div class="col-md-6 col-lg-3">
+                <h5>Contact Details</h5>
+                <p><i class="fa-solid fa-location-dot me-2"></i>Oklahoma City, USA</p>
+                <p><i class="fa-solid fa-phone me-2"></i>+1 405-634-4796</p>
+                <p><i class="fa-solid fa-envelope me-2"></i>sherrisdiner@yahoo.com</p>
+            </div>
+        </div>
+
+        <hr class="footer-divider">
+
+        <div class="footer-bottom">
+            <p>© <span id="year"></span> Sherri's Diner. All rights reserved.</p>
+            <p>Designed with <i class="fa-solid fa-heart"></i> by Dev Miracle</p>
+        </div>
+    </div>
+</footer>
+
+<script src="bootstrap.bundle.min.js"></script>
+</body>
+</html>

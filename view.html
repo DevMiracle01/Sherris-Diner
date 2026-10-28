@@ -1,0 +1,1075 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Full Menu | Sherri's Diner</title>
+    <style>
+        
+/* =========================
+   FULL MENU PAGE
+========================= */
+
+.full-menu-hero {
+    padding: 85px 0 75px;
+    background:
+        radial-gradient(circle at 10% 20%, #ffe6d5 0, transparent 30%),
+        var(--cream);
+}
+
+.full-menu-hero .section-title {
+    font-size: clamp(2.5rem, 5vw, 4rem);
+    margin-bottom: 15px;
+}
+
+.full-menu-hero p {
+    max-width: 600px;
+    margin: 0 auto 22px;
+    color: var(--muted);
+}
+
+.menu-breadcrumb {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    font-size: 0.9rem;
+}
+
+.menu-breadcrumb a {
+    color: var(--orange);
+    font-weight: 700;
+}
+
+.menu-breadcrumb i {
+    font-size: 0.7rem;
+    color: #aaa;
+}
+
+.menu-breadcrumb span {
+    color: var(--muted);
+}
+
+.full-menu-toolbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-bottom: 28px;
+}
+
+.full-menu-toolbar h2 {
+    font-size: 1.6rem;
+}
+
+.full-menu-search {
+    width: min(100%, 360px);
+}
+
+.full-menu-filters {
+    margin-bottom: 35px;
+}
+
+.full-menu-filters .filter-btn {
+    padding: 10px 20px;
+}
+
+@media (max-width: 575px) {
+    .full-menu-hero {
+        padding: 60px 0 50px;
+    }
+
+    .full-menu-toolbar {
+        align-items: stretch;
+    }
+
+    .full-menu-search {
+        width: 100%;
+    }
+
+    .full-menu-filters {
+        justify-content: flex-start;
+    }
+}
+
+    </style>
+
+    <link rel="stylesheet" href="CSS/bootstrap.min.css">
+    <link rel="stylesheet" href="CSS/style.css">
+
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar navbar-expand-lg navbar-light sticky-top">
+    <div class="container">
+        <a class="navbar-brand logo" href="ai.html">
+            SHERRI'S <span>DINER.</span>
+        </a>
+
+        <button class="navbar-toggler" type="button"
+                data-bs-toggle="collapse" data-bs-target="#mainNav"
+                aria-controls="mainNav" aria-expanded="false"
+                aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="mainNav">
+            <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-3">
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html#home">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html#about">About</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" href="view.html">Our Menu</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html#contact">Contact</a>
+                </li>
+                <li class="nav-item">
+                    <button class="btn btn-orange position-relative" id="cartButton">
+                        <i class="fa-solid fa-bag-shopping me-2"></i>
+                        Cart
+                        <span class="cart-count" id="cartCount">0</span>
+                    </button>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<!-- MENU HERO -->
+<header class="full-menu-hero">
+    <div class="container text-center">
+        <span class="section-tag">GOOD FOOD STARTS HERE</span>
+
+        <h1 class="section-title">
+            Our Full <span>Menu</span>
+        </h1>
+
+        <p>
+            From satisfying sandwiches to comforting meals and crispy snacks,
+            discover your next favorite dish.
+        </p>
+
+        <div class="menu-breadcrumb">
+            <a href="index.html">Home</a>
+            <i class="fa-solid fa-chevron-right"></i>
+            <span>Full Menu</span>
+        </div>
+    </div>
+</header>
+
+<!-- FULL MENU -->
+<section class="menu-section section-padding">
+    <div class="container">
+
+        <div class="full-menu-toolbar">
+            <div>
+                <h2 class="fw-bold mb-1">Find Your Favorite</h2>
+                <p class="text-muted mb-0">
+                    <span id="resultCount">16</span> menu items to explore
+                </p>
+            </div>
+
+            <div class="search-box full-menu-search">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <input type="search" id="searchInput"
+                       class="form-control"
+                       placeholder="Search meals..."
+                       aria-label="Search meals">
+            </div>
+        </div>
+
+        <div class="menu-filters full-menu-filters">
+            <button class="filter-btn active" data-filter="all">All Foods</button>
+            <button class="filter-btn" data-filter="sandwich">Sandwiches</button>
+            <button class="filter-btn" data-filter="snacks">Snacks</button>
+            <button class="filter-btn" data-filter="meal">meal</button>
+            <button class="filter-btn" data-filter="breakfast">Breakfast</button>
+        </div>
+
+        <div class="row g-4" id="menuGrid">
+
+            <!-- 1 -->
+            <div class="col-sm-6 col-lg-4 col-xl-3 menu-item"
+                 data-category="sandwich" data-name="reuben sandwich">
+                <div class="food-card">
+                    <div class="food-image">
+                        <img src="images/reuben sandwich.jpeg" alt="Reuben Sandwich" loading="lazy">
+                        <span class="food-label">Popular</span>
+                    </div>
+                    <div class="food-info">
+                        <div class="food-title-row">
+                            <h5>Reuben Sandwich</h5>
+                            <span class="food-rating"><i class="fa-solid fa-star"></i> 4.9</span>
+                        </div>
+                        <p>A delicious classic sandwich.</p>
+                        <div class="food-bottom">
+                            <strong>$10.75</strong>
+                            <button class="add-cart" data-name="Reuben Sandwich" data-price="10.75" aria-label="Add Reuben Sandwich to cart"><i class="fa-solid fa-plus"></i></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 2 -->
+            <div class="col-sm-6 col-lg-4 col-xl-3 menu-item"
+                 data-category="meal" data-name="cabbage rolls">
+                <div class="food-card">
+                    <div class="food-image">
+                        <img src="images/cabbage rolls.jpg" alt="Cabbage Rolls" loading="lazy">
+                    </div>
+                    <div class="food-info">
+                        <div class="food-title-row">
+                            <h5>Cabbage Rolls</h5>
+                            <span class="food-rating"><i class="fa-solid fa-star"></i> 4.8</span>
+                        </div>
+                        <p>A comforting homemade favorite.</p>
+                        <div class="food-bottom">
+                            <strong>$8.99</strong>
+                            <button class="add-cart" data-name="Cabbage Rolls" data-price="8.99" aria-label="Add Cabbage Rolls to cart"><i class="fa-solid fa-plus"></i></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 3 -->
+            <div class="col-sm-6 col-lg-4 col-xl-3 menu-item"
+                 data-category="breakfast" data-name="french toast">
+                <div class="food-card">
+                    <div class="food-image">
+                        <img src="images/french toast.jpg" alt="French Toast" loading="lazy">
+                    </div>
+                    <div class="food-info">
+                        <div class="food-title-row">
+                            <h5>French Toast</h5>
+                            <span class="food-rating"><i class="fa-solid fa-star"></i> 4.7</span>
+                        </div>
+                        <p>A lovely choice for breakfast.</p>
+                        <div class="food-bottom">
+                            <strong>$6.99</strong>
+                            <button class="add-cart" data-name="French Toast" data-price="6.99" aria-label="Add French Toast to cart"><i class="fa-solid fa-plus"></i></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 4 -->
+            <div class="col-sm-6 col-lg-4 col-xl-3 menu-item"
+                 data-category="meal" data-name="goulash">
+                <div class="food-card">
+                    <div class="food-image">
+                        <img src="images/goulash.jpg" alt="Goulash" loading="lazy">
+                    </div>
+                    <div class="food-info">
+                        <div class="food-title-row">
+                            <h5>Goulash</h5>
+                            <span class="food-rating"><i class="fa-solid fa-star"></i> 4.8</span>
+                        </div>
+                        <p>A hearty and satisfying meal.</p>
+                        <div class="food-bottom">
+                            <strong>$8.99</strong>
+                            <button class="add-cart" data-name="Goulash" data-price="8.99" aria-label="Add Goulash to cart"><i class="fa-solid fa-plus"></i></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 5 -->
+            <div class="col-sm-6 col-lg-4 col-xl-3 menu-item"
+                 data-category="sandwich" data-name="chicken sandwich">
+                <div class="food-card">
+                    <div class="food-image">
+                        <img src="images/fried chicken sandwich.jpg" alt="Chicken Sandwich" loading="lazy">
+                    </div>
+                    <div class="food-info">
+                        <div class="food-title-row">
+                            <h5>Chicken Sandwich</h5>
+                            <span class="food-rating"><i class="fa-solid fa-star"></i> 4.9</span>
+                        </div>
+                        <p>Crispy, tasty and satisfying.</p>
+                        <div class="food-bottom">
+                            <strong>$8.99</strong>
+                            <button class="add-cart" data-name="Chicken Sandwich" data-price="8.99" aria-label="Add Chicken Sandwich to cart"><i class="fa-solid fa-plus"></i></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 6 -->
+            <div class="col-sm-6 col-lg-4 col-xl-3 menu-item"
+                 data-category="snacks" data-name="fried jalapenos">
+                <div class="food-card">
+                    <div class="food-image">
+                        <img src="images/Fried-Jalapenos-tall-FS.jpg" alt="Fried Jalapenos" loading="lazy">
+                    </div>
+                    <div class="food-info">
+                        <div class="food-title-row">
+                            <h5>Fried Jalapenos</h5>
+                            <span class="food-rating"><i class="fa-solid fa-star"></i> 4.6</span>
+                        </div>
+                        <p>A crunchy snacks with a kick.</p>
+                        <div class="food-bottom">
+                            <strong>$5.99</strong>
+                            <button class="add-cart" data-name="Fried Jalapenos" data-price="5.99" aria-label="Add Fried Jalapenos to cart"><i class="fa-solid fa-plus"></i></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 7 -->
+            <div class="col-sm-6 col-lg-4 col-xl-3 menu-item"
+                 data-category="snacks" data-name="onion rings">
+                <div class="food-card">
+                    <div class="food-image">
+                        <img src="images/onion.jpg" alt="Onion Rings" loading="lazy">
+                    </div>
+                    <div class="food-info">
+                        <div class="food-title-row">
+                            <h5>Onion Rings</h5>
+                            <span class="food-rating"><i class="fa-solid fa-star"></i> 4.7</span>
+                        </div>
+                        <p>Golden, crispy and delicious.</p>
+                        <div class="food-bottom">
+                            <strong>$2.99</strong>
+                            <button class="add-cart" data-name="Onion Rings" data-price="2.99" aria-label="Add Onion Rings to cart"><i class="fa-solid fa-plus"></i></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 8 -->
+            <div class="col-sm-6 col-lg-4 col-xl-3 menu-item"
+                 data-category="snacks" data-name="homemade pies">
+                <div class="food-card">
+                    <div class="food-image">
+                        <img src="images/pie.jpg" alt="Homemade Pies" loading="lazy">
+                    </div>
+                    <div class="food-info">
+                        <div class="food-title-row">
+                            <h5>Homemade Pies</h5>
+                            <span class="food-rating"><i class="fa-solid fa-star"></i> 4.8</span>
+                        </div>
+                        <p>A sweet taste of home.</p>
+                        <div class="food-bottom">
+                            <strong>$3.99</strong>
+                            <button class="add-cart" data-name="Homemade Pies" data-price="3.99" aria-label="Add Homemade Pies to cart"><i class="fa-solid fa-plus"></i></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 9 -->
+            <div class="col-sm-6 col-lg-4 col-xl-3 menu-item"
+                 data-category="meal" data-name="taco">
+                <div class="food-card">
+                    <div class="food-image">
+                        <img src="images/taco.jpeg" alt="Taco" loading="lazy">
+                    </div>
+                    <div class="food-info">
+                        <div class="food-title-row">
+                            <h5>Taco</h5>
+                            <span class="food-rating"><i class="fa-solid fa-star"></i> 4.8</span>
+                        </div>
+                        <p>A flavorful bite for any time.</p>
+                        <div class="food-bottom">
+                            <strong>$4.29</strong>
+                            <button class="add-cart" data-name="Taco" data-price="4.29" aria-label="Add Taco to cart"><i class="fa-solid fa-plus"></i></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 10 -->
+            <div class="col-sm-6 col-lg-4 col-xl-3 menu-item"
+                 data-category="sandwich" data-name="steak sandwich">
+                <div class="food-card">
+                    <div class="food-image">
+                        <img src="images/steak sandwich.jpg" alt="Steak Sandwich" loading="lazy">
+                    </div>
+                    <div class="food-info">
+                        <div class="food-title-row">
+                            <h5>Steak Sandwich</h5>
+                            <span class="food-rating"><i class="fa-solid fa-star"></i> 4.9</span>
+                        </div>
+                        <p>A filling classic with rich flavor.</p>
+                        <div class="food-bottom">
+                            <strong>$8.99</strong>
+                            <button class="add-cart" data-name="Steak Sandwich" data-price="8.99" aria-label="Add Steak Sandwich to cart"><i class="fa-solid fa-plus"></i></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 11 -->
+            <div class="col-sm-6 col-lg-4 col-xl-3 menu-item"
+                 data-category="meal" data-name="homemade spaghetti">
+                <div class="food-card">
+                    <div class="food-image">
+                        <img src="images/spaghetti.jpg" alt="Homemade Spaghetti" loading="lazy">
+                    </div>
+                    <div class="food-info">
+                        <div class="food-title-row">
+                            <h5>Homemade Spaghetti</h5>
+                            <span class="food-rating"><i class="fa-solid fa-star"></i> 4.8</span>
+                        </div>
+                        <p>A comforting plate of goodness.</p>
+                        <div class="food-bottom">
+                            <strong>$8.99</strong>
+                            <button class="add-cart" data-name="Homemade Spaghetti" data-price="8.99" aria-label="Add Homemade Spaghetti to cart"><i class="fa-solid fa-plus"></i></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 12 -->
+            <div class="col-sm-6 col-lg-4 col-xl-3 menu-item"
+                 data-category="meal" data-name="thick cut pork">
+                <div class="food-card">
+                    <div class="food-image">
+                        <img src="images/pork.jpg" alt="Thick Cut Pork" loading="lazy">
+                    </div>
+                    <div class="food-info">
+                        <div class="food-title-row">
+                            <h5>Thick Cut Pork</h5>
+                            <span class="food-rating"><i class="fa-solid fa-star"></i> 4.7</span>
+                        </div>
+                        <p>A hearty dish for a big appetite.</p>
+                        <div class="food-bottom">
+                            <strong>$12.99</strong>
+                            <button class="add-cart" data-name="Thick Cut Pork" data-price="12.99" aria-label="Add Thick Cut Pork to cart"><i class="fa-solid fa-plus"></i></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 13: additional dish using an existing image -->
+            <div class="col-sm-6 col-lg-4 col-xl-3 menu-item"
+                 data-category="breakfast" data-name="Liver and Onions">
+                <div class="food-card">
+                    <div class="food-image">
+                        <img src="images/liver and onions.webp" alt="Liver and Onions" loading="lazy">
+                    </div>
+                    <div class="food-info">
+                        <div class="food-title-row">
+                            <h5>Liver and Onions</h5>
+                            <span class="food-rating"><i class="fa-solid fa-star"></i> 4.7</span>
+                        </div>
+                        <p>Hearty Beef Liver with Sauteed Onions</p>
+                        <div class="food-bottom">
+                            <strong>$8.99</strong>
+                            <button class="add-cart" data-name="Liver and Onions" data-price="8.99" aria-label="Add Liver and Onions to cart"><i class="fa-solid fa-plus"></i></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 14 -->
+            <div class="col-sm-6 col-lg-4 col-xl-3 menu-item"
+                 data-category="snacks" data-name="Homemade Cream Pie">
+                <div class="food-card">
+                    <div class="food-image">
+                        <img src="images/cream pie.jpg" alt="Homemade Cream Pie" loading="lazy">
+                    </div>
+                    <div class="food-info">
+                        <div class="food-title-row">
+                            <h5>Homemade Cream Pie</h5>
+                            <span class="food-rating"><i class="fa-solid fa-star"></i> 4.6</span>
+                        </div>
+                        <p>cream pie topped whipped cream</p>
+                        <div class="food-bottom">
+                            <strong>$8.99</strong>
+                            <button class="add-cart" data-name="Homemade Cream Pie" data-price="8.99" aria-label="Add Homemade Cream Pie to cart"><i class="fa-solid fa-plus"></i></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 15 -->
+            <div class="col-sm-6 col-lg-4 col-xl-3 menu-item"
+                 data-category="meal" data-name="Chicken and Dumplings">
+                <div class="food-card">
+                    <div class="food-image">
+                        <img src="images/chicken-dumplings.jpg" alt="Chicken and Dumplings" loading="lazy">
+                    </div>
+                    <div class="food-info">
+                        <div class="food-title-row">
+                            <h5>Chicken and Dumplings</h5>
+                            <span class="food-rating"><i class="fa-solid fa-star"></i> 4.8</span>
+                        </div>
+                        <p>Homemade chicken and dumplings</p>
+                        <div class="food-bottom">
+                            <strong>$3.99</strong>
+                            <button class="add-cart" data-name="Chicken and Dumplings" data-price="3.99" aria-label="Add Chicken and Dumplings to cart"><i class="fa-solid fa-plus"></i></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 16 -->
+            <div class="col-sm-6 col-lg-4 col-xl-3 menu-item"
+                 data-category="sandwich" data-name="Club Sandwich">
+                <div class="food-card">
+                    <div class="food-image">
+                        <img src="images/club sandwich.jpg" alt="Club Sandwich" loading="lazy">
+                    </div>
+                    <div class="food-info">
+                        <div class="food-title-row">
+                            <h5>Club Sandwich</h5>
+                            <span class="food-rating"><i class="fa-solid fa-star"></i> 4.9</span>
+                        </div>
+                        <p>A rich and satisfying sandwich.</p>
+                        <div class="food-bottom">
+                            <strong>$2.99</strong>
+                            <button class="add-cart" data-name="Classic Steak Melt" data-price="2.99" aria-label="Add Club Sandwich to cart"><i class="fa-solid fa-plus"></i></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 17 -->
+             <div class="col-sm-6 col-lg-4 col-xl-3 menu-item"
+                 data-category="meal" data-name="Catfish special">
+                <div class="food-card">
+                    <div class="food-image">
+                        <img src="images/catfish special.jpg" alt="Catfish special" loading="lazy">
+                    </div>
+                    <div class="food-info">
+                        <div class="food-title-row">
+                            <h5>Catfish special</h5>
+                            <span class="food-rating"><i class="fa-solid fa-star"></i> 4.9</span>
+                        </div>
+                        <p>Crispy fried catfish with fries and slaw</p>
+                        <div class="food-bottom">
+                            <strong>$10.99</strong>
+                            <button class="add-cart" data-name="Catfish special" data-price="10.99" aria-label="Add Catfish special to cart"><i class="fa-solid fa-plus"></i></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 18 -->
+             <div class="col-sm-6 col-lg-4 col-xl-3 menu-item"
+                 data-category="meal" data-name="Crispy Chicken Salad">
+                <div class="food-card">
+                    <div class="food-image">
+                        <img src="images/crispy  chicken salad.jpg" alt="Crispy Chicken Salad" loading="lazy">
+                    </div>
+                    <div class="food-info">
+                        <div class="food-title-row">
+                            <h5>Crispy Chicken Salad</h5>
+                            <span class="food-rating"><i class="fa-solid fa-star"></i> 4.9</span>
+                        </div>
+                        <p>Crispy fried chicken over garden salad</p>
+                        <div class="food-bottom">
+                            <strong>$8.99</strong>
+                            <button class="add-cart" data-name="Crispy Chicken Salad" data-price="8.99" aria-label="Add Crispy Chicken Salad to cart"><i class="fa-solid fa-plus"></i></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 19 -->
+             <div class="col-sm-6 col-lg-4 col-xl-3 menu-item"
+                 data-category="meal" data-name="Santa Fe Grilled Chicken">
+                <div class="food-card">
+                    <div class="food-image">
+                        <img src="images/santa fe chicken.jpg" alt="Santa Fe Grilled Chicken" loading="lazy">
+                    </div>
+                    <div class="food-info">
+                        <div class="food-title-row">
+                            <h5>Santa Fe Grilled Chicken</h5>
+                            <span class="food-rating"><i class="fa-solid fa-star"></i> 4.9</span>
+                        </div>
+                        <p>Grilled marinated chicken</p>
+                        <div class="food-bottom">
+                            <strong>$7.99</strong>
+                            <button class="add-cart" data-name="Santa Fe Grilled Chicken" data-price="7.99" aria-label="Add Santa Fe Grilled Chicken to cart"><i class="fa-solid fa-plus"></i></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 20 -->
+              <div class="col-sm-6 col-lg-4 col-xl-3 menu-item"
+                 data-category="snacks" data-name="Blueberry Cobbler">
+                <div class="food-card">
+                    <div class="food-image">
+                        <img src="images/blueberry cobbler.jpg" alt="Blueberry Cobbler" loading="lazy">
+                    </div>
+                    <div class="food-info">
+                        <div class="food-title-row">
+                            <h5>Blueberry Cobbler</h5>
+                            <span class="food-rating"><i class="fa-solid fa-star"></i> 4.7</span>
+                        </div>
+                        <p>warm berry cobbler with crumble</p>
+                        <div class="food-bottom">
+                            <strong>$2.99</strong>
+                            <button class="add-cart" data-name="Blueberry Cobbler" data-price="2.99" aria-label="Add Blueberry Cobbler to cart"><i class="fa-solid fa-plus"></i></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 21 -->
+              <div class="col-sm-6 col-lg-4 col-xl-3 menu-item"
+                 data-category="meal" data-name="Homemade Beef Stew">
+                <div class="food-card">
+                    <div class="food-image">
+                        <img src="images/beef stew.jpg" alt="Homemade Beef Stew" loading="lazy">
+                    </div>
+                    <div class="food-info">
+                        <div class="food-title-row">
+                            <h5>Homemade Beef Stew</h5>
+                            <span class="food-rating"><i class="fa-solid fa-star"></i> 4.9</span>
+                        </div>
+                        <p>Homemade beef stew with potatoes</p>
+                        <div class="food-bottom">
+                            <strong>$3.29</strong>
+                            <button class="add-cart" data-name="Homemade Beef Stew" data-price="3.29" aria-label="Add Homemade Beef Stew to cart"><i class="fa-solid fa-plus"></i></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 22 -->
+              <div class="col-sm-6 col-lg-4 col-xl-3 menu-item"
+                 data-category="snacks" data-name="Pumpkin mini pancakes">
+                <div class="food-card">
+                    <div class="food-image">
+                        <img src="images/pumpkin pancake.jpg" alt="Pumpkin mini pancakes" loading="lazy">
+                    </div>
+                    <div class="food-info">
+                        <div class="food-title-row">
+                            <h5>Pumpkin Pancakes</h5>
+                            <span class="food-rating"><i class="fa-solid fa-star"></i> 4.9</span>
+                        </div>
+                        <p>Pumpkin mini pancakes</p>
+                        <div class="food-bottom">
+                            <strong>$2.29</strong>
+                            <button class="add-cart" data-name="Pumpkin mini pancakes" data-price="2.29" aria-label="Add Pumpkin mini pancakes to cart"><i class="fa-solid fa-plus"></i></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 23 -->
+              <div class="col-sm-6 col-lg-4 col-xl-3 menu-item"
+                 data-category="snacks" data-name="Fried Pickles">
+                <div class="food-card">
+                    <div class="food-image">
+                        <img src="images/fried pickles.jpg" alt="Fried Pickles" loading="lazy">
+                    </div>
+                    <div class="food-info">
+                        <div class="food-title-row">
+                            <h5>Fried Pickles</h5>
+                            <span class="food-rating"><i class="fa-solid fa-star"></i> 4.8</span>
+                        </div>
+                        <p>Crispy fried pickles with ranch dips.</p>
+                        <div class="food-bottom">
+                            <strong>$5.00</strong>
+                            <button class="add-cart" data-name="Fried Pickles" data-price="5" aria-label="Add Fried Pickles to cart"><i class="fa-solid fa-plus"></i></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 24 -->
+              <div class="col-sm-6 col-lg-4 col-xl-3 menu-item"
+                 data-category="snacks" data-name="Cinnamon Rolls">
+                <div class="food-card">
+                    <div class="food-image">
+                        <img src="images/cinnamon rolls.jpg" alt="Cinnamon Rolls" loading="lazy">
+                    </div>
+                    <div class="food-info">
+                        <div class="food-title-row">
+                            <h5>Cinnamon Rolls</h5>
+                            <span class="food-rating"><i class="fa-solid fa-star"></i> 4.9</span>
+                        </div>
+                        <p>Fresh Cinnamon rolls with icing</p>
+                        <div class="food-bottom">
+                            <strong>$3.99</strong>
+                            <button class="add-cart" data-name="Cinnamon Rolls" data-price="3.99" aria-label="Add Cinnamon Rolls to cart"><i class="fa-solid fa-plus"></i></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 25 -->
+              <div class="col-sm-6 col-lg-4 col-xl-3 menu-item"
+                 data-category="breakfast" data-name="Great Apettizers">
+                <div class="food-card">
+                    <div class="food-image">
+                        <img src="images/great appetizers.jpg" alt="Great Apettizers" loading="lazy">
+                    </div>
+                    <div class="food-info">
+                        <div class="food-title-row">
+                            <h5>Great Apettizers</h5>
+                            <span class="food-rating"><i class="fa-solid fa-star"></i> 4.9</span>
+                        </div>
+                        <p>A crunchy snacks with a kick.</p>
+                        <div class="food-bottom">
+                            <strong>$5.00</strong>
+                            <button class="add-cart" data-name="Great Apettizers" data-price="5" aria-label="Add Great Apettizers to cart"><i class="fa-solid fa-plus"></i></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 26 -->
+              <div class="col-sm-6 col-lg-4 col-xl-3 menu-item"
+                 data-category="snacks" data-name="Homemade Pecan apple pie">
+                <div class="food-card">
+                    <div class="food-image">
+                        <img src="images/apple pie.jpg" alt="Homemade Pecan apple pie" loading="lazy">
+                    </div>
+                    <div class="food-info">
+                        <div class="food-title-row">
+                            <h5>Pecan Apple Pie</h5>
+                            <span class="food-rating"><i class="fa-solid fa-star"></i> 4.9</span>
+                        </div>
+                        <p>Homemade Pecan apple pie</p>
+                        <div class="food-bottom">
+                            <strong>$8.99</strong>
+                            <button class="add-cart" data-name="Homemade Pecan apple pie" data-price="8.99" aria-label="Add Homemade Pecan apple pie to cart"><i class="fa-solid fa-plus"></i></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 27 -->
+              <div class="col-sm-6 col-lg-4 col-xl-3 menu-item"
+                 data-category="meal" data-name="Homemade turkey and dressing">
+                <div class="food-card">
+                    <div class="food-image">
+                        <img src="images/turkey and dressing.jpg" alt="Homemade turkey and dressing" loading="lazy">
+                    </div>
+                    <div class="food-info">
+                        <div class="food-title-row">
+                            <h5>Turkey and Dressing</h5>
+                            <span class="food-rating"><i class="fa-solid fa-star"></i> 4.9</span>
+                        </div>
+                        <p>Homemade turkey and dressing</p>
+                        <div class="food-bottom">
+                            <strong>$9.99</strong>
+                            <button class="add-cart" data-name="Homemade turkey and dressing" data-price="9.99" aria-label="Add Homemade turkey and dressing to cart"><i class="fa-solid fa-plus"></i></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 28 -->
+              <div class="col-sm-6 col-lg-4 col-xl-3 menu-item"
+                 data-category="breakfast" data-name="Smoked Sausage and Eggs">
+                <div class="food-card">
+                    <div class="food-image">
+                        <img src="images/sausage and egg.jpg" alt="Smoked Sausage and Eggs" loading="lazy">
+                    </div>
+                    <div class="food-info">
+                        <div class="food-title-row">
+                            <h5>Smoked Sausage and Eggs</h5>
+                            <span class="food-rating"><i class="fa-solid fa-star"></i> 4.9</span>
+                        </div>
+                        <p>Crispy grilled smoked sausage</p>
+                        <div class="food-bottom">
+                            <strong>$9.99</strong>
+                            <button class="add-cart" data-name="Smoked Sausage and Eggs" data-price="9.99" aria-label="Add Smoked Sausage and Eggs to cart"><i class="fa-solid fa-plus"></i></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <p id="noResults" class="text-center mt-5 d-none">
+            No meals found. Try another search or category.
+        </p>
+
+        <div class="text-center mt-5">
+            <a href="index.html#menu" class="btn btn-outline-dark btn-lg">
+                <i class="fa-solid fa-arrow-left me-2"></i>
+                Back to Homepage Menu
+            </a>
+        </div>
+    </div>
+</section>
+
+<!-- CART MODAL -->
+<div class="modal fade" id="cartModal" tabindex="-1"
+     aria-labelledby="cartModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="cartModalLabel">
+                    <i class="fa-solid fa-bag-shopping me-2"></i>Your Cart
+                </h5>
+                <button type="button" class="btn-close"
+                        data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+
+            <div class="modal-body">
+                <div id="cartItems"></div>
+                <hr>
+                <div class="d-flex justify-content-between">
+                    <strong>Total</strong>
+                    <strong id="cartTotal">$0.00</strong>
+                </div>
+                <small class="text-muted d-block mt-2">
+                    Demo cart only. No payment is processed.
+                </small>
+            </div>
+
+            <div class="modal-footer">
+                <button class="btn btn-outline-secondary"
+                        data-bs-dismiss="modal">Continue Shopping</button>
+                <button class="btn btn-orange" id="checkoutButton">
+                    Place Order
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- FOOTER -->
+<footer class="site-footer">
+    <div class="container">
+        <div class="row g-4">
+            <div class="col-md-6 col-lg-4">
+                <a href="index.html" class="navbar-brand logo footer-logo">
+                    SHERRI'S <span>DINER.</span>
+                </a>
+                <p class="footer-description">
+                    Bringing people together with delicious food
+                    and memorable dining experiences.
+                </p>
+            </div>
+
+            <div class="col-6 col-lg-4">
+                <h5>Quick Links</h5>
+                <a href="index.html#home">Home</a>
+                <a href="index.html#about">About Us</a>
+                <a href="index.html#contact">Contact</a>
+            </div>
+
+            <div class="col-6 col-lg-4">
+                <h5>Contact</h5>
+                <p><i class="fa-solid fa-phone me-2"></i>+1 405-634-4796</p>
+                <p><i class="fa-solid fa-envelope me-2"></i>sherrisdiner@yahoo.com</p>
+            </div>
+        </div>
+
+        <hr class="footer-divider">
+
+        <div class="footer-bottom">
+            <p>© <span id="year"></span> Sherri's Diner. All rights reserved.</p>
+            <p>Designed with <i class="fa-solid fa-heart"></i> by Dev Miracle</p>
+        </div>
+    </div>
+</footer>
+
+<script src="Js/bootstrap.bundle.min.js"></script>
+<script>
+    
+document.addEventListener("DOMContentLoaded", () => {
+    // Footer year
+    document.getElementById("year").textContent =
+        new Date().getFullYear();
+
+    // Menu search and category filters
+    const searchInput = document.getElementById("searchInput");
+    const menuItems = [...document.querySelectorAll(".menu-item")];
+    const filterButtons = [...document.querySelectorAll(".filter-btn")];
+    const noResults = document.getElementById("noResults");
+    const resultCount = document.getElementById("resultCount");
+
+    let activeCategory = "all";
+
+    function filterMenu() {
+        const query = searchInput.value.trim().toLowerCase();
+        let visibleCount = 0;
+
+        menuItems.forEach(item => {
+            const name = item.dataset.name.toLowerCase();
+            const category = item.dataset.category;
+
+            const matchesSearch = name.includes(query);
+            const matchesCategory =
+                activeCategory === "all" ||
+                category === activeCategory;
+
+            const visible = matchesSearch && matchesCategory;
+
+            item.classList.toggle("d-none", !visible);
+
+            if (visible) visibleCount++;
+        });
+
+        resultCount.textContent = visibleCount;
+        noResults.classList.toggle("d-none", visibleCount !== 0);
+    }
+
+    searchInput.addEventListener("input", filterMenu);
+
+    filterButtons.forEach(button => {
+        button.addEventListener("click", () => {
+            filterButtons.forEach(btn =>
+                btn.classList.remove("active")
+            );
+
+            button.classList.add("active");
+            activeCategory = button.dataset.filter;
+
+            filterMenu();
+        });
+    });
+
+    // Shopping cart
+    const cart = new Map();
+
+    const cartCount = document.getElementById("cartCount");
+    const cartButton = document.getElementById("cartButton");
+    const cartItems = document.getElementById("cartItems");
+    const cartTotal = document.getElementById("cartTotal");
+
+    const modal = bootstrap.Modal.getOrCreateInstance(
+        document.getElementById("cartModal")
+    );
+
+    function updateCart() {
+        let quantityTotal = 0;
+        let priceTotal = 0;
+
+        cartItems.replaceChildren();
+
+        if (cart.size === 0) {
+            const message = document.createElement("p");
+            message.className = "text-center text-muted py-3";
+            message.textContent = "Your cart is empty.";
+            cartItems.appendChild(message);
+        }
+
+        cart.forEach((item, name) => {
+            quantityTotal += item.quantity;
+            priceTotal += item.price * item.quantity;
+
+            const row = document.createElement("div");
+            row.className = "cart-row";
+
+            const details = document.createElement("div");
+            const title = document.createElement("strong");
+            const price = document.createElement("small");
+
+            title.textContent = name;
+            price.textContent =
+                `$${(item.price * item.quantity).toFixed(2)}`;
+
+            details.append(title, price);
+
+            const controls = document.createElement("div");
+            controls.className = "cart-quantity";
+
+            const minus = document.createElement("button");
+            minus.type = "button";
+            minus.textContent = "−";
+            minus.setAttribute("aria-label", `Remove one ${name}`);
+
+            const number = document.createElement("span");
+            number.textContent = item.quantity;
+
+            const plus = document.createElement("button");
+            plus.type = "button";
+            plus.textContent = "+";
+            plus.setAttribute("aria-label", `Add one ${name}`);
+
+            minus.addEventListener("click", () => {
+                changeQuantity(name, -1);
+            });
+
+            plus.addEventListener("click", () => {
+                changeQuantity(name, 1);
+            });
+
+            controls.append(minus, number, plus);
+            row.append(details, controls);
+            cartItems.appendChild(row);
+        });
+
+        cartCount.textContent = quantityTotal;
+        cartTotal.textContent = `$${priceTotal.toFixed(2)}`;
+    }
+
+    function changeQuantity(name, amount) {
+        const item = cart.get(name);
+
+        if (!item) return;
+
+        item.quantity += amount;
+
+        if (item.quantity <= 0) {
+            cart.delete(name);
+        }
+
+        updateCart();
+    }
+
+    document.querySelectorAll(".add-cart").forEach(button => {
+        button.addEventListener("click", () => {
+            const name = button.dataset.name;
+            const price = Number(button.dataset.price);
+
+            if (!name || !Number.isFinite(price) || price < 0) {
+                return;
+            }
+
+            if (cart.has(name)) {
+                cart.get(name).quantity++;
+            } else {
+                cart.set(name, { price, quantity: 1 });
+            }
+
+            updateCart();
+
+            const originalHTML = button.innerHTML;
+            button.innerHTML = '<i class="fa-solid fa-check"></i>';
+
+            setTimeout(() => {
+                button.innerHTML = originalHTML;
+            }, 700);
+        });
+    });
+
+    cartButton.addEventListener("click", () => {
+        updateCart();
+        modal.show();
+    });
+
+    document.getElementById("checkoutButton")
+        .addEventListener("click", () => {
+            if (cart.size === 0) {
+                alert("Please add a meal to your cart first.");
+                return;
+            }
+
+            alert(
+                "This is a demo checkout. Connect a backend to " +
+                "process real orders and payments."
+            );
+        });
+
+    updateCart();
+    filterMenu();
+});
+
+</script>
+
+</body>
+</html>
