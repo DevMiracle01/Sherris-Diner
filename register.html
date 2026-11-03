@@ -1,0 +1,135 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Registration | Sherri's Diner</title>
+
+    <link rel="stylesheet" href="CSS/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+</head>
+
+<body class="bg-light">
+
+    <div class="container min-vh-100 d-flex justify-content-center align-items-center py-4">
+
+        <div class="card shadow border-0 rounded-4 p-4" style="max-width: 480px; width: 100%;">
+
+            <!-- BRAND -->
+            <div class="text-center mb-4">
+                <h3 class="fw-bold">
+                    SHERRI'S <span style="color: orangered;">DINER.</span>
+                </h3>
+                <p class="text-secondary small">Restaurant Admin Panel</p>
+            </div>
+
+            <!-- HEADING -->
+            <div class="mb-4">
+                <h4 class="fw-bold">Create Admin Account</h4>
+                <p class="text-secondary small">
+                    Register to manage your restaurant.
+                </p>
+            </div>
+
+            <!-- REGISTRATION FORM -->
+            <form action="register.php" method="POST">
+
+                <!-- FULL NAME -->
+                <div class="mb-3">
+                    <label class="form-label fw-semibold">Full Name</label>
+                    <div class="input-group">
+                        <span class="input-group-text bg-white">
+                            <i class="fa-solid fa-user text-secondary"></i>
+                        </span>
+                        <input type="text" name="fullname" class="form-control"
+                            placeholder="Enter your full name" required>
+                    </div>
+                </div>
+
+                <!-- EMAIL -->
+                <div class="mb-3">
+                    <label class="form-label fw-semibold">Email Address</label>
+                    <div class="input-group">
+                        <span class="input-group-text bg-white">
+                            <i class="fa-solid fa-envelope text-secondary"></i>
+                        </span>
+                        <input type="email" name="email" class="form-control"
+                            placeholder="Enter your email" required>
+                    </div>
+                </div>
+
+                <!-- PHONE -->
+                <div class="mb-3">
+                    <label class="form-label fw-semibold">Phone Number</label>
+                    <div class="input-group">
+                        <span class="input-group-text bg-white">
+                            <i class="fa-solid fa-phone text-secondary"></i>
+                        </span>
+                        <input type="tel" name="phone" class="form-control"
+                            placeholder="Enter your phone number" required>
+                    </div>
+                </div>
+
+                <!-- PASSWORD -->
+                <div class="mb-3">
+                    <label class="form-label fw-semibold">Password</label>
+                    <div class="input-group">
+                        <span class="input-group-text bg-white">
+                            <i class="fa-solid fa-lock text-secondary"></i>
+                        </span>
+                        <input type="password" name="password" class="form-control"
+                            placeholder="Create a password" required minlength="8">
+                    </div>
+                </div>
+
+                <!-- CONFIRM PASSWORD -->
+                <div class="mb-3">
+                    <label class="form-label fw-semibold">Confirm Password</label>
+                    <div class="input-group">
+                        <span class="input-group-text bg-white">
+                            <i class="fa-solid fa-lock text-secondary"></i>
+                        </span>
+                        <input type="password" name="confirm_password" class="form-control"
+                            placeholder="Confirm your password" required minlength="8">
+                    </div>
+                </div>
+
+                <!-- TERMS -->
+                <div class="form-check mb-4">
+                    <input type="checkbox" class="form-check-input" id="terms" required>
+                    <label class="form-check-label small" for="terms">
+                        I agree to the Terms and Conditions.
+                    </label>
+                </div>
+
+                <!-- BUTTON -->
+                <button type="submit" class="btn w-100 py-2 fw-bold text-white" style="background: orangered;">
+                    Create Account
+                    <i class="fa-solid fa-arrow-right ms-2"></i>
+                </button>
+
+            </form>
+
+            <!-- LOGIN LINK -->
+            <p class="text-center text-secondary small mt-4 mb-0">
+                Already have an account?
+                <a href="login.html" class="text-decoration-none fw-bold" style="color: orangered;">
+                    Login Here
+                </a>
+            </p>
+
+            <hr class="my-4">
+
+            <p class="text-center text-secondary small mb-0">
+                &copy; 2026 Sherri's Diner. All Rights Reserved.
+            </p>
+
+        </div>
+
+    </div>
+
+    <script src="JS/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>

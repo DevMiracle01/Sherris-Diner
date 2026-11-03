@@ -17,6 +17,51 @@
     box-sizing: border-box;
 }
 
+/* Professional Cart Button */
+.cart-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    background: #f47721;
+    color: #fff;
+    border: none;
+    padding: 9px 17px;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.cart-btn i {
+    font-size: 15px;
+}
+
+.cart-btn:hover {
+    background: #d95f12;
+    color: #fff;
+}
+
+/* Cart Quantity */
+.cart-count {
+    position: absolute;
+    top: -8px;
+    right: -8px;
+    min-width: 19px;
+    height: 19px;
+    padding: 0 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #29231f;
+    color: #fff;
+    border: 2px solid #fff;
+    border-radius: 50px;
+    font-size: 10px;
+    font-weight: 700;
+}
+
 html {
     scroll-behavior: smooth;
     scroll-padding-top: 85px;

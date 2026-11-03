@@ -1,0 +1,87 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Login | Sherri's Diner</title>
+
+    <link rel="stylesheet" href="CSS/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+</head>
+
+<body class="bg-light">
+
+    <div class="container min-vh-100 d-flex justify-content-center align-items-center">
+
+        <div class="card shadow border-0 rounded-4 p-4" style="max-width: 420px; width: 100%;">
+
+            <!-- BRAND -->
+            <div class="text-center mb-4">
+                <h3 class="fw-bold">SHERRI'S <span style="color: orangered;">DINER.</span></h3>
+                <p class="text-secondary small">Restaurant Admin Panel</p>
+            </div>
+
+            <!-- LOGIN HEADING -->
+            <div class="mb-4">
+                <h4 class="fw-bold">Welcome Back!</h4>
+                <p class="text-secondary small">Login to manage your restaurant.</p>
+            </div>
+
+            <!-- LOGIN FORM -->
+            <form action="login.php" method="POST">
+
+                <div class="mb-3">
+                    <label class="form-label fw-semibold">Email Address</label>
+                    <div class="input-group">
+                        <span class="input-group-text bg-white">
+                            <i class="fa-solid fa-envelope text-secondary"></i>
+                        </span>
+                        <input type="email" name="email" class="form-control" placeholder="Enter your email" required>
+                    </div>
+                </div>
+
+                <div class="mb-3">
+                    <label class="form-label fw-semibold">Password</label>
+                    <div class="input-group">
+                        <span class="input-group-text bg-white">
+                            <i class="fa-solid fa-lock text-secondary"></i>
+                        </span>
+                        <input type="password" name="password" class="form-control" placeholder="Enter your password" required>
+                    </div>
+                </div>
+
+                <div class="d-flex justify-content-between align-items-center mb-4">
+                    <div class="form-check">
+                        <input type="checkbox" class="form-check-input" id="remember">
+                        <label class="form-check-label small" for="remember">
+                            Remember me
+                        </label>
+                    </div>
+
+                    <a href="forgot-password.php" class="text-decoration-none small" style="color: orangered;">
+                        Forgot Password?
+                    </a>
+                </div>
+
+                <button type="submit" class="btn w-100 py-2 fw-bold text-white" style="background: orangered;">
+                    Login to Dashboard
+                    <i class="fa-solid fa-arrow-right ms-2"></i>
+                </button>
+
+            </form>
+
+            <hr class="my-4">
+
+            <p class="text-center text-secondary small mb-0">
+                &copy; 2026 Sherri's Diner. All Rights Reserved.
+            </p>
+
+        </div>
+
+    </div>
+
+    <script src="JS/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>

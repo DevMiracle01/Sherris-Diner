@@ -1,0 +1,355 @@
+<?php
+conn.php;
+
+?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sherri's Diner | Admin Dashboard</title>
+
+    <link rel="stylesheet" href="CSS/bootstrap.min.css">
+    <link rel="stylesheet" href="CSS/dashboard.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+</head>
+
+<body>
+
+<div class="container-fluid">
+    <div class="row">
+
+        <!-- SIDEBAR -->
+        <aside class="col-lg-2 sidebar p-0">
+
+            <div class="brand">
+                <h4>SHERRI'S <span>DINER.</span></h4>
+            </div>
+
+            <div class="menu-label">MAIN MENU</div>
+
+            <ul class="nav-menu list-unstyled">
+                <li class="active">
+                    <i class="fa-solid fa-house"></i> Dashboard
+                </li>
+                <li>
+                    <i class="fa-solid fa-utensils"></i> Foods
+                </li>
+                <li>
+                    <i class="fa-solid fa-bag-shopping"></i> Orders
+                    <span class="menu-count">12</span>
+                </li>
+                <li>
+                    <i class="fa-solid fa-layer-group"></i> Categories
+                </li>
+                <li>
+                    <i class="fa-solid fa-users"></i> Customers
+                </li>
+            </ul>
+
+            <div class="menu-label">MANAGEMENT</div>
+
+            <ul class="nav-menu list-unstyled">
+                <li>
+                    <i class="fa-solid fa-chart-pie"></i> Analytics
+                </li>
+                <li>
+                    <i class="fa-solid fa-star"></i> Reviews
+                </li>
+                <li>
+                    <i class="fa-solid fa-gear"></i> Settings
+                </li>
+                <li>
+                    <i class="fa-solid fa-circle-question"></i> Help Center
+                </li>
+            </ul>
+
+            <div class="sidebar-bottom">
+                <div class="admin-profile">
+                    <img src="images/chef 1.jpg" alt="Admin">
+                    <div>
+                        <h6>Sherri Admin</h6>
+                        <small>Administrator</small>
+                    </div>
+                </div>
+
+                <button class="logout-btn">
+                    <i class="fa-solid fa-right-from-bracket"></i>
+                    Logout
+                </button>
+            </div>
+
+        </aside>
+
+
+        <!-- MAIN CONTENT -->
+        <main class="col-lg-10 main-content">
+
+            <!-- TOPBAR -->
+            <div class="topbar">
+
+                <div>
+                    <h4>Dashboard Overview</h4>
+                    <p>Welcome back, Sherri! Here's what's happening today.</p>
+                </div>
+
+                <div class="top-actions">
+
+                    <div class="search-box">
+                        <i class="fa-solid fa-search"></i>
+                        <input type="text" placeholder="Search anything...">
+                    </div>
+
+                    <button class="notification">
+                        <i class="fa-regular fa-bell"></i>
+                        <span></span>
+                    </button>
+
+                    <img src="images/chef 1.jpg" class="top-avatar" alt="Admin">
+
+                </div>
+
+            </div>
+
+
+            <!-- DATE AND BUTTON -->
+            <div class="dashboard-heading">
+                <div>
+                    <h5>Overview</h5>
+                    <small>Monitor your restaurant performance.</small>
+                </div>
+
+                <button class="add-food">
+                    <i class="fa-solid fa-plus"></i> Add New Food
+                </button>
+            </div>
+
+
+            <!-- STATISTICS -->
+            <div class="row g-4 stats-row">
+
+                <div class="col-xl-3 col-md-6">
+                    <div class="stat-card">
+                        <div class="stat-top">
+                            <div class="stat-icon orange">
+                                <i class="fa-solid fa-bag-shopping"></i>
+                            </div>
+                            <span class="growth">+12.5%</span>
+                        </div>
+                        <p>Total Orders</p>
+                        <h3>1,254</h3>
+                        <small>Compared to last month</small>
+                    </div>
+                </div>
+
+                <div class="col-xl-3 col-md-6">
+                    <div class="stat-card">
+                        <div class="stat-top">
+                            <div class="stat-icon green">
+                                <i class="fa-solid fa-dollar-sign"></i>
+                            </div>
+                            <span class="growth">+8.2%</span>
+                        </div>
+                        <p>Total Revenue</p>
+                        <h3>$18,240.50</h3>
+                        <small>Compared to last month</small>
+                    </div>
+                </div>
+
+                <div class="col-xl-3 col-md-6">
+                    <div class="stat-card">
+                        <div class="stat-top">
+                            <div class="stat-icon blue">
+                                <i class="fa-solid fa-clock"></i>
+                            </div>
+                            <span class="pending">Live</span>
+                        </div>
+                        <p>Active Orders</p>
+                        <h3>12</h3>
+                        <small>Orders being processed</small>
+                    </div>
+                </div>
+
+                <div class="col-xl-3 col-md-6">
+                    <div class="stat-card">
+                        <div class="stat-top">
+                            <div class="stat-icon purple">
+                                <i class="fa-solid fa-utensils"></i>
+                            </div>
+                            <span class="growth">+4 New</span>
+                        </div>
+                        <p>Total Food Items</p>
+                        <h3>38</h3>
+                        <small>Available on your menu</small>
+                    </div>
+                </div>
+
+            </div>
+
+
+            <!-- CHART AND POPULAR FOOD -->
+            <div class="row g-4 mt-2">
+
+                <div class="col-lg-8">
+                    <div class="content-card">
+                        <div class="card-heading">
+                            <div>
+                                <h5>Revenue Overview</h5>
+                                <small>Your restaurant earnings</small>
+                            </div>
+
+                            <select class="form-select">
+                                <option>This Week</option>
+                                <option>This Month</option>
+                                <option>This Year</option>
+                            </select>
+                        </div>
+
+                        <div class="chart-placeholder">
+                            <div class="chart-bars">
+                                <div style="height:45%"></div>
+                                <div style="height:70%"></div>
+                                <div style="height:55%"></div>
+                                <div style="height:90%"></div>
+                                <div style="height:65%"></div>
+                                <div style="height:100%"></div>
+                                <div style="height:78%"></div>
+                            </div>
+
+                            <div class="chart-labels">
+                                <span>Mon</span>
+                                <span>Tue</span>
+                                <span>Wed</span>
+                                <span>Thu</span>
+                                <span>Fri</span>
+                                <span>Sat</span>
+                                <span>Sun</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="col-lg-4">
+                    <div class="content-card popular-card">
+                        <div class="card-heading">
+                            <div>
+                                <h5>Popular Food</h5>
+                                <small>Best selling items</small>
+                            </div>
+                            <i class="fa-solid fa-ellipsis"></i>
+                        </div>
+
+                        <div class="popular-item">
+                            <img src="images/reuben sandwich.jpeg" alt="">
+                            <div>
+                                <h6>Reuben Sandwich</h6>
+                                <small>124 Orders</small>
+                            </div>
+                            <strong>$10.75</strong>
+                        </div>
+
+                        <div class="popular-item">
+                            <img src="images/fried chicken sandwich.jpg" alt="">
+                            <div>
+                                <h6>Chicken Sandwich</h6>
+                                <small>98 Orders</small>
+                            </div>
+                            <strong>$8.99</strong>
+                        </div>
+
+                        <div class="popular-item">
+                            <img src="images/spaghetti.jpg" alt="">
+                            <div>
+                                <h6>Homemade Spaghetti</h6>
+                                <small>86 Orders</small>
+                            </div>
+                            <strong>$8.99</strong>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+
+
+            <!-- RECENT ORDERS -->
+            <div class="content-card recent-orders mt-4">
+
+                <div class="card-heading">
+                    <div>
+                        <h5>Recent Orders</h5>
+                        <small>Keep track of your latest orders</small>
+                    </div>
+
+                    <a href="#">View All Orders <i class="fa-solid fa-arrow-right"></i></a>
+                </div>
+
+                <div class="table-responsive">
+                    <table class="table align-middle">
+                        <thead>
+                            <tr>
+                                <th>ORDER ID</th>
+                                <th>CUSTOMER</th>
+                                <th>FOOD ITEM</th>
+                                <th>DATE</th>
+                                <th>AMOUNT</th>
+                                <th>STATUS</th>
+                            </tr>
+                        </thead>
+
+                        <tbody>
+                            <tr>
+                                <td>#ORD001</td>
+                                <td>John Smith</td>
+                                <td>Reuben Sandwich</td>
+                                <td>Oct 26, 2026</td>
+                                <td>$10.75</td>
+                                <td><span class="status delivered">Delivered</span></td>
+                            </tr>
+
+                            <tr>
+                                <td>#ORD002</td>
+                                <td>Sarah Johnson</td>
+                                <td>Chicken Sandwich</td>
+                                <td>Oct 26, 2026</td>
+                                <td>$8.99</td>
+                                <td><span class="status pending-status">Pending</span></td>
+                            </tr>
+
+                            <tr>
+                                <td>#ORD003</td>
+                                <td>Michael Brown</td>
+                                <td>Homemade Spaghetti</td>
+                                <td>Oct 25, 2026</td>
+                                <td>$8.99</td>
+                                <td><span class="status preparing">Preparing</span></td>
+                            </tr>
+
+                            <tr>
+                                <td>#ORD004</td>
+                                <td>Emily Davis</td>
+                                <td>French Toast</td>
+                                <td>Oct 25, 2026</td>
+                                <td>$6.99</td>
+                                <td><span class="status delivered">Delivered</span></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+            </div>
+
+            <footer>
+                © 2026 Sherri's Diner. All rights reserved.
+            </footer>
+
+        </main>
+
+    </div>
+</div>
+
+
+<script src="JS/bootstrap.bundle.min.js"></script>
+</body>
+</html>

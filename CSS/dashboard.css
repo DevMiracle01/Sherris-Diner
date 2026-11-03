@@ -1,0 +1,556 @@
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'DM Sans', sans-serif;
+    background: #f8f7f4;
+    color: #292521;
+}
+
+/* SIDEBAR */
+
+.sidebar {
+    background: #28221e;
+    min-height: 100vh;
+    color: white;
+    padding: 0 18px !important;
+    position: relative;
+}
+
+.brand {
+    padding: 30px 12px;
+}
+
+.brand h4 {
+    font-size: 19px;
+    font-weight: 800;
+    letter-spacing: -0.5px;
+}
+
+.brand span {
+    color: #f49b45;
+}
+
+.menu-label {
+    color: #918780;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    padding: 18px 12px 12px;
+}
+
+.nav-menu li {
+    padding: 13px 12px;
+    margin-bottom: 6px;
+    border-radius: 8px;
+    color: #c7c0bb;
+    font-size: 13px;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.nav-menu li i {
+    width: 25px;
+    font-size: 15px;
+}
+
+.nav-menu li:hover,
+.nav-menu li.active {
+    background: #e98936;
+    color: white;
+}
+
+.menu-count {
+    float: right;
+    background: #e98936;
+    color: white;
+    padding: 2px 7px;
+    border-radius: 20px;
+    font-size: 10px;
+}
+
+.sidebar-bottom {
+    position: absolute;
+    bottom: 20px;
+    left: 18px;
+    right: 18px;
+}
+
+.admin-profile {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 15px 0;
+    border-top: 1px solid #49413b;
+}
+
+.admin-profile img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.admin-profile h6 {
+    font-size: 12px;
+    margin-bottom: 3px;
+}
+
+.admin-profile small {
+    font-size: 10px;
+    color: #aaa09a;
+}
+
+.logout-btn {
+    width: 100%;
+    border: none;
+    background: #3b302a;
+    color: #ff9b83;
+    padding: 11px;
+    border-radius: 8px;
+    font-size: 12px;
+}
+
+
+/* MAIN CONTENT */
+
+.main-content {
+    padding: 25px 35px;
+}
+
+.topbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: 25px;
+    border-bottom: 1px solid #ebe7e1;
+}
+
+.topbar h4 {
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.topbar p {
+    color: #99918a;
+    font-size: 12px;
+    margin: 5px 0 0;
+}
+
+.top-actions {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.search-box {
+    display: flex;
+    align-items: center;
+    background: white;
+    border: 1px solid #eee9e3;
+    border-radius: 8px;
+    padding: 10px 13px;
+    gap: 10px;
+    width: 230px;
+}
+
+.search-box i {
+    color: #999;
+    font-size: 13px;
+}
+
+.search-box input {
+    border: none;
+    outline: none;
+    width: 100%;
+    font-size: 12px;
+}
+
+.notification {
+    width: 38px;
+    height: 38px;
+    border: 1px solid #eee9e3;
+    background: white;
+    border-radius: 8px;
+    position: relative;
+}
+
+.notification span {
+    position: absolute;
+    top: 7px;
+    right: 8px;
+    height: 7px;
+    width: 7px;
+    border-radius: 50%;
+    background: #f28b39;
+}
+
+.top-avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+
+/* DASHBOARD HEADING */
+
+.dashboard-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 30px 0 20px;
+}
+
+.dashboard-heading h5 {
+    font-size: 17px;
+    font-weight: 700;
+}
+
+.dashboard-heading small {
+    color: #99918a;
+    font-size: 12px;
+}
+
+.add-food {
+    background: #e98936;
+    border: none;
+    padding: 12px 18px;
+    border-radius: 7px;
+    color: white;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.add-food:hover {
+    background: #ce7429;
+}
+
+
+/* STATISTICS */
+
+.stat-card {
+    background: white;
+    padding: 22px;
+    border-radius: 12px;
+    border: 1px solid #f0ece7;
+    height: 100%;
+    transition: .3s;
+}
+
+.stat-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 25px rgba(0,0,0,.05);
+}
+
+.stat-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.stat-icon {
+    width: 42px;
+    height: 42px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+}
+
+.orange {
+    background: #fff0e1;
+    color: #e98936;
+}
+
+.green {
+    background: #e5f7ec;
+    color: #2da66b;
+}
+
+.blue {
+    background: #e7f0ff;
+    color: #4b83d5;
+}
+
+.purple {
+    background: #f2eaff;
+    color: #9464d9;
+}
+
+.growth {
+    color: #259b64;
+    background: #e9f8ef;
+    padding: 5px 8px;
+    border-radius: 5px;
+    font-size: 10px;
+}
+
+.pending {
+    color: #4b83d5;
+    background: #e7f0ff;
+    padding: 5px 8px;
+    border-radius: 5px;
+    font-size: 10px;
+}
+
+.stat-card p {
+    color: #918a84;
+    font-size: 12px;
+    margin-bottom: 7px;
+}
+
+.stat-card h3 {
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 7px;
+}
+
+.stat-card small {
+    font-size: 10px;
+    color: #aaa29b;
+}
+
+
+/* CONTENT CARDS */
+
+.content-card {
+    background: white;
+    border-radius: 12px;
+    padding: 22px;
+    border: 1px solid #f0ece7;
+    height: 100%;
+}
+
+.card-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+}
+
+.card-heading h5 {
+    font-size: 15px;
+    font-weight: 700;
+    margin-bottom: 5px;
+}
+
+.card-heading small {
+    color: #99918a;
+    font-size: 11px;
+}
+
+.card-heading select {
+    width: 120px;
+    font-size: 11px;
+    border-color: #eee9e3;
+    box-shadow: none;
+}
+
+
+/* REVENUE CHART */
+
+.chart-placeholder {
+    height: 190px;
+    padding: 15px 5px 0;
+    border-bottom: 1px solid #eee9e3;
+}
+
+.chart-bars {
+    height: 145px;
+    display: flex;
+    align-items: end;
+    justify-content: space-around;
+    gap: 15px;
+    background: repeating-linear-gradient(
+        to bottom,
+        transparent 0,
+        transparent 35px,
+        #f3f0eb 36px
+    );
+}
+
+.chart-bars div {
+    width: 30px;
+    background: #efa15d;
+    border-radius: 5px 5px 0 0;
+    min-height: 10px;
+    transition: .3s;
+}
+
+.chart-bars div:hover {
+    background: #d97725;
+}
+
+.chart-labels {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 10px;
+    color: #99918a;
+    font-size: 10px;
+}
+
+
+/* POPULAR FOOD */
+
+.popular-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 12px 0;
+    border-bottom: 1px solid #f1ede8;
+}
+
+.popular-item:last-child {
+    border-bottom: none;
+}
+
+.popular-item img {
+    width: 43px;
+    height: 43px;
+    border-radius: 8px;
+    object-fit: cover;
+}
+
+.popular-item div {
+    flex: 1;
+}
+
+.popular-item h6 {
+    font-size: 11px;
+    font-weight: 700;
+    margin-bottom: 5px;
+}
+
+.popular-item small {
+    font-size: 10px;
+    color: #99918a;
+}
+
+.popular-item strong {
+    font-size: 11px;
+}
+
+
+/* RECENT ORDERS */
+
+.recent-orders {
+    margin-bottom: 25px;
+}
+
+.card-heading a {
+    color: #e98936;
+    font-size: 11px;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.table {
+    font-size: 11px;
+    white-space: nowrap;
+}
+
+.table thead th {
+    color: #99918a;
+    font-size: 10px;
+    font-weight: 700;
+    border-bottom: 1px solid #eee9e3;
+    padding: 15px 10px;
+}
+
+.table tbody td {
+    padding: 16px 10px;
+    color: #5d5751;
+    border-bottom: 1px solid #f4f1ed;
+}
+
+.status {
+    padding: 6px 10px;
+    border-radius: 20px;
+    font-size: 10px;
+}
+
+.delivered {
+    background: #e6f7ed;
+    color: #249b61;
+}
+
+.pending-status {
+    background: #fff3dc;
+    color: #d69a26;
+}
+
+.preparing {
+    background: #e8efff;
+    color: #507ad0;
+}
+
+
+/* FOOTER */
+
+footer {
+    text-align: center;
+    color: #aaa29b;
+    font-size: 11px;
+    padding: 15px;
+}
+
+
+/* RESPONSIVE */
+
+@media (max-width: 991px) {
+
+    .sidebar {
+        min-height: auto;
+        padding-bottom: 20px !important;
+    }
+
+    .sidebar-bottom {
+        position: static;
+        margin-top: 20px;
+    }
+
+    .main-content {
+        padding: 20px;
+    }
+
+}
+
+@media (max-width: 576px) {
+
+    .topbar {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .top-actions {
+        width: 100%;
+    }
+
+    .search-box {
+        flex: 1;
+    }
+
+    .dashboard-heading {
+        gap: 15px;
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .add-food {
+        width: 100%;
+    }
+
+    .main-content {
+        padding: 15px;
+    }
+
+}
